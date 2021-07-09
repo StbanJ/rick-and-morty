@@ -1,25 +1,25 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   template: `
-    <div>
-    <p><img src="{{items.image}}" alt="" width="100%" height="200"></p>
-            <p>Nombre: {{items.name}}</p>
-            <p>Especie: {{items.species}}</p>
-            <p>Tipo: {{ items.type }}</p>
-            <p>Genero: {{ items.gender }}</p>
-            <p>Nombre_Origen: {{ items.origin.name }}</p>
-            <p>Localizacion: {{ items.location.name }}</p>
-            <p><a [routerLink] = "['/personaje', items.id]">Leer mas >>>></a></p>
-</div>
+              <img src="{{item.image}}" alt="" width="250" height="250" class="pl-14 rounded-full">
+              <p >{{item.name}}</p>
+              <p>{{item.species}}</p>
+              <p>{{ item.type }}</p>
+              <p>{{ item.gender }}</p>
+              <p>{{ item.origin.name }}</p>
+              <p>{{ item.location.name }}</p>
+              <div class="border-2 transition duration-300 ease-in-out transform hover:scale-110 motion-reduce:transform-none rounded-full py-2 px-8 mx-20 mt-4 bg-green-500 text-white">
+              <a [routerLink]="['/characters', item.id]">
+              Ver Mas
+              </a>
+              </div>
   `,
-  styles: [
-  ]
 })
-export class CardComponent{
-  @Input() 
-  items: any;
+export class CardComponent {
 
+  @Input()
+  item: any;
 
 }

@@ -1,12 +1,9 @@
 {
   "name": "rick-and-morty",
   "version": "0.0.0",
-  "engines": {
-    "node": "14.17.1"
-  },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start" : "node server.js",
     "start-serve": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

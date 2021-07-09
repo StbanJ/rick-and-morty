@@ -1,10 +1,10 @@
-<div>
-    <h2 class="text-center text-purple-700 text-opacity-75 text-4xl font-serif my-8">Lista de Personajes</h2>
-    <ul class="flex flex-wrap ">
+<div class="text-center bg-gray-200 w-screen">
+    <h2 class="text-center text-green-700 text-opacity-75 text-4xl font-serif py-8">List de Personajes</h2>
+    <ul class="flex flex-wrap border-2 border-green-500 justify-center">
         <!-- <div  class="flex flex-wrap"> -->
-        <li *ngFor="let item of characters" class=" m-10  shadow-2xl">
-            <app-card [items]="item"></app-card>
-        </li>
+            <li *ngFor="let item of characters" class="separar shadow-2xl content-center rounded-3xl" >
+                <app-card [item]="item"></app-card>
+            </li>
         <!-- </div> -->
     </ul>
 </div>

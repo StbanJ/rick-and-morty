@@ -7,6 +7,7 @@ import { CharactersComponent } from './characters/characters.component';
 import { LocationsComponent } from './locations/locations.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 import "tailwindcss/tailwind.css";
 import { CardComponent } from './characters/card/card.component';
 import { CharacterComponent } from './characters/character/character.component'
