@@ -1,0 +1,10 @@
+<div>
+    <h2 class="text-center text-purple-700 text-opacity-75 text-4xl font-serif my-8">Lista de Personajes</h2>
+    <ul class="flex flex-wrap ">
+        <!-- <div  class="flex flex-wrap"> -->
+        <li *ngFor="let item of characters" class=" m-10  shadow-2xl">
+            <app-card [items]="item"></app-card>
+        </li>
+        <!-- </div> -->
+    </ul>
+</div>
