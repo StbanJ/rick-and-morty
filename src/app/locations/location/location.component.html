@@ -1,0 +1,32 @@
+<div class="bg-yellow-400">
+    <div>
+        <div class="text-center text-white py-8 bg-yellow-400">
+            <h1>{{unalocalizacion.name}}</h1>
+        </div>
+        <div class = "flex flex flex-row  justify-center mx-96 my-8 py-11 content-center bg-yellow-400">
+
+            <p>{{unalocalizacion.name}}</p>
+            <p>Tipo: {{unalocalizacion.type}}</p>
+            <p>Dimension: {{unalocalizacion.dimension}}</p>
+            <p>Creado: {{unalocalizacion.created}}</p>
+        </div>
+    </div>
+    <div class="text-center">
+        <h2 class="text-center text-white py-8 bg-yellow-400 ">List de Personajes</h2>
+        <ul class="flex flex-wrap border-2  justify-center mx-8 bg-yellow-400 text-white">
+            <!-- <div  class="flex flex-wrap"> -->
+            <div *ngFor="let item of Personajes" class="m-8 content-center">
+
+                <img src="{{item.image}}" alt="" width="210" height="50" class=" ml-10">
+                <p>{{item.name}}</p>
+                <div>
+                    <a [routerLink]="['/characters', item.id]">
+                        Ver Mas
+                    </a>
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </ul>
+    </div>
+</div>

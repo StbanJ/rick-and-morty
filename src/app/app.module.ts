@@ -9,8 +9,15 @@ import { EpisodesComponent } from './episodes/episodes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import "tailwindcss/tailwind.css";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatSliderModule } from '@angular/material/slider';
+
 import { CardComponent } from './characters/card/card.component';
-import { CharacterComponent } from './characters/character/character.component'
+import { CharacterComponent } from './characters/character/character.component';
+import { EpisodeComponent } from './episodes/episode/episode.component';
+import { LocationComponent } from './locations/location/location.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -20,11 +27,17 @@ import { CharacterComponent } from './characters/character/character.component'
     EpisodesComponent,
     NavbarComponent,
     CardComponent,
-    CharacterComponent
+    CharacterComponent,
+    EpisodeComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

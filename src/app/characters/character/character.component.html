@@ -1,1 +1,47 @@
-<p>character works!</p>
+<div>
+    <div>
+        <div class="text-center text-white py-8 bg-yellow-400">
+            <h1>{{character.name}}</h1>
+        
+        <div class = "flex - justify-center my-8 py-11 bg-yellow-400">
+
+            <div>
+                <img src="{{character.image}}" width="300px" height="300px" class=" mr-10 ">
+            </div>
+
+            <div>
+                <p>Estado: {{character.status}}</p>
+                <p>Especie: {{character.species}}</p>
+                <p>Tipo: {{character.type}}</p>
+                <p>Genero: {{character.gender}}</p>
+                <p>Fecha de creacion: {{character.created}}</p>
+            </div>
+
+        </div>
+    </div>
+   <div class="text-center w-screen flex-col">
+
+            <div> <h2 class="text-center text-white py-8 bg-yellow-400">Episodios</h2> </div>
+
+            <div *ngFor="let item of Episodios">
+                <ul>
+                    <li>
+                        <p class="text-white">Nombre Episodio:{{item.name}}</p>
+                    </li> 
+                    <li>
+                        <p>Fecha: {{item.air_date}}</p>
+                    </li>
+                    <li>
+                        <p>Episodio N°: {{item.episode}}</p>
+                    </li>
+                    <li>
+                        <p>Creado: {{item.created}}</p>
+                    </li>
+                    <li>
+                        <button routerLink="/episode/{{item.id}}">Ver Episodio</button>
+                    </li>
+                </ul>
+            </div>
+
+    </div> 
+</div>

@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-card',
   template: `
-              <img src="{{item.image}}" alt="" width="250" height="250" class="pl-14 rounded-full">
+              <img src="{{item.image}}" alt="" width="250" height="250" class="pl-10">
               <p >{{item.name}}</p>
               <p>{{item.species}}</p>
               <p>{{ item.type }}</p>

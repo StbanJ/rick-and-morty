@@ -1,1 +1,19 @@
-<p>episodes works!</p>
+<div class="text-center bg-yellow-400 w-screen">
+    <h2 class="text-center text-white text-4xl font-serif py-8">Episodios</h2>
+    <ul class="flex flex-wrap border-2 border-yellow-400 text-white justify-center">
+        <!-- <div  class="flex flex-wrap"> -->
+        <li *ngFor="let item of episodios" class=" content-center ">
+            <p>Nombre Episodio:{{item.name}}</p>
+            <p>Fecha: {{item.air_date}}</p>
+            <p>Episodio N°: {{item.episode}}</p>
+            <p>Creado: {{item.created}}</p>
+            <div
+                class=" motion-reduce:transform-none py-2 px-8 mx-20 mt-4 bg-yello-500 text-white">
+                <a [routerLink]="['/episode', item.id]">
+                    Ver Mas!
+                </a>
+            </div>
+        </li>
+        <!-- </div> -->
+    </ul>
+</div>

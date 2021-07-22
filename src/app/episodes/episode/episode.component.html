@@ -1,0 +1,34 @@
+<div class="bg-yellow-400">
+    <div>
+        <div class="text-center text-white py-8">
+            <h1>{{unEpisodio.name}}</h1>
+        </div>
+        <div class = "flex justify-center mx-96 my-8 py-11 content-center">
+            <div>
+                <p>Nombre Episodio:{{unEpisodio.name}}</p>
+                <p>Fecha: {{unEpisodio.air_date}}</p>
+                <p>Episodio N°: {{unEpisodio.episode}}</p>
+                <p>Creado: {{unEpisodio.created}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div  class="text-center  flex-col">
+
+        <h2 class="text-center text-white  py-8">Lista de Personajes</h2>
+        <ul class="flex flex-wrap justify-center mx-8">
+            <!-- <div  class="flex flex-wrap"> -->
+            <div *ngFor="let item of Personajes" class="m-8 content-center">
+                <img src="{{item.image}}"  alt="" width="210" height="50" class=" ml-10">
+                <p >{{item.name}}</p>
+                <div >
+                <a [routerLink]="['/characters', item.id]">
+                    Ver Mas
+                </a>
+              </div>
+            </div>
+            <!-- </div> -->
+        </ul>
+
+    </div>
+</div>

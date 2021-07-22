@@ -16,4 +16,6 @@ export class CharactersService {
     let character:any = await response.json()
     return character;
   };
+
+  getPersonajes=(j: any)=>fetch(j).then((response)=>response.json());
 }
